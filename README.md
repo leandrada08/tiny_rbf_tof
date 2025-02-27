@@ -68,6 +68,40 @@ To work on this project, follow these steps to manually set up the environment:
 
 ---
 
+
+
+## Experiments
+
+### Considerations
+
+- The experiment was conducted within a range of **2 cm to 200 cm**, as this is where the **ToF sensor** experiences issues with **crosstalk**.
+- A **crosstalk level of 80%** of the object's signal was assumed.
+- **Shot noise** and **ambient light noise** were added, with ambient light contributing **20% of the object's signal**, simulating normal conditions.
+
+
+### Results
+|Metodo|MAE[cm]|RMSE[cm]|Improvement|
+|----|---|---|---|
+|Traditional|18.5865|29.4987||
+|RBF5m|14.055724|21.639403|24.38%|
+|RBF3h|8.569565|15.055834|53.89%|
+|RBF12h|8.663295|15.056971|53.39%|
+|RBF48h|8.560303|15.04805|53.94%|
+
+### Time refence
+
+| t_ref | max_neurons | mean_neurons |
+|-------|------------:|-------------:|
+| 5m    |          72 |      62.262667 |
+| 50m   |          72 |      70.764  |
+| 3h    |          72 |      72.0    |
+| 6h    |          72 |      72.0    |
+| 12h   |          72 |      72.0    |
+| 24h   |          72 |      72.0    |
+| 48h   |          72 |      72.0    |
+
+
 ## **Authors**
 
 - Luis Elain Andrada ([l.andrada@unisa.studenti.it](mailto:l.andrada@unisa.studenti.it))
+- Andrea Fasolino([afasolino@unisa.it](mailto:afasolino@unisa.it))
